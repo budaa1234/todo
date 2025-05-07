@@ -1,5 +1,6 @@
 import { useState } from "react";
 import style from "../styles/todo.module.css";
+
 export const Form = ({ setTaskList, taskList }) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -13,6 +14,7 @@ export const Form = ({ setTaskList, taskList }) => {
       taskName: inputValue,
       isCompleted: false,
     };
+
     setTaskList([...taskList, newTask]);
     setInputValue("");
   };
@@ -24,7 +26,7 @@ export const Form = ({ setTaskList, taskList }) => {
             value={inputValue}
             placeholder="Add a new task..."
             className={style.input}
-            oneChange={handleChange}
+            onChange={handleChange}
           />
         </div>
         <div>
