@@ -3,7 +3,7 @@ export const Info = () => {
   return (
     <div>
       <p className={style.info}>No tasks yet. Add one above!</p>
-      <p>hello</p>
+      <p></p>
     </div>
   );
 };
