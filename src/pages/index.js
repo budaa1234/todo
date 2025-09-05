@@ -32,11 +32,11 @@ export default function Home() {
   });
 
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
       <div className={style.list}>
         <p className={style.title}>To-Do list </p>
         <Form setTaskList={setTaskList} taskList={taskList} />
-        <Filter setFilter={setFilter} />
+        <Filter setFilter={setFilter} currentFilter={filter} />
         {filteredTask.map((task, id) => (
           <Task
             key={id}
@@ -45,7 +45,8 @@ export default function Home() {
             toggleCheckBox={toggleCheckBox}
           />
         ))}
-        <Info />
+        <Info taskList={taskList} setTaskList={setTaskList} />
+
         <div style={{ display: "flex", gap: "5px" }}>
           <p style={{ color: "#6B7280", fontSize: "12px" }}>Powered by</p>
           <p style={{ color: "#3B73ED", fontSize: "12px" }}>Pinecone academy</p>

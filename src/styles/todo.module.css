@@ -41,7 +41,7 @@
   border-radius: 6px;
   border: none;
 }
-/* //task */
+
 .task {
   display: flex;
   align-items: center;
@@ -60,18 +60,23 @@
   border: none;
 }
 .button2 {
-  width: auto;
-  height: 32px;
-  background-color: #f3f4f6;
-  color: #363636;
-  border-radius: 6px;
+  background-color: #f3f4f6; 
+  color: #374151;
   border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-.button2:active {
-  background-color: #3c82f6;
-  color: #ffffff;
+
+.button2:hover {
+  background-color: #e5e7eb;
 }
-/* info */
+
+.activeButton {
+  background-color: #3b82f6; 
+  color: white;
+}
 .info {
   color: #6b7280;
   font-size: 14px;
